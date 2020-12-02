@@ -1,0 +1,104 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #81ecec;
+}
+
+.menu {
+  width: 60px;
+  height: 60px;
+  background: #FFF;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+
+  &:hover {
+    box-shadow: 0 0 0 8px #FFF, 0 0 0 8px #FFF;
+  }
+
+  .hamburger {
+    display: block;
+    background: #000000;
+    width: 30px;
+    height: 2px;
+    position: relative;
+    top: 29px;
+    left: 15px;
+    transition: .5s ease-in-out;
+
+    &::after, &::before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: .5s ease-in-out;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+}
+
+input[id="menu-hamburger"] {
+  display: none;
+}
+
+input[id="menu-hamburger"]:checked  ~ .menu-list{
+  opacity: 1;
+}
+
+input[id="menu-hamburger"]:checked ~ label .menu {
+  box-shadow: 0 0 0 130vw #FFF, 0 0 0 130vh #FFF;
+}
+
+input[id="menu-hamburger"]:checked ~ label .hamburger {
+  transform: rotate(45deg);
+}
+
+input[id="menu-hamburger"]:checked ~ label .hamburger::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input[id="menu-hamburger"]:checked ~ label .hamburger::after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+.menu-list { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  list-style: none;
+  opacity: 0;
+  transition: .25s 1s cubic-bezier(0, 1.07, 0, 1.02);
+
+  a {
+    color: #00cec9;
+    font-size: 4.7rem;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,17 @@
+$color: #333;
+$background: #EFEFEF;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color;
+  background: $background;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

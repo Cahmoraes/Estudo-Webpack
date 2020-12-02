@@ -1,0 +1,96 @@
+$l-device: 960px;
+$m-device: 760px;
+$s-device: 480px;
+$gutter: 20px;
+$cols: 12;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@mixin d($size) {
+  @if $size == l {
+    @media only screen and (min-width: $l-device) {
+      @content;
+    }
+  }
+  @else if $size == m {
+    @media only screen and (min-width: $m-device) and (max-width: $l-device - 1) {
+      @content;
+    }
+  }
+  @else if $size == s {
+    @media only screen and (max-width: $m-device - 1) {
+      @content;
+    }
+  }
+}
+
+@function grid($col) {
+  $width: $col / $cols * 100%;
+  $result: calc(#{$width} - #{$gutter});
+  @return $result;
+}
+
+@for $i from 1 through $cols {
+  .grid-#{$i} {
+    flex: 0 1 grid($i);
+    max-width: grid($i);
+  }
+}
+
+@mixin grid-structure {
+  min-height: 1px;
+  align-self: flex-start;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  @include d(s) {
+    flex: 0 1 grid(12);
+    align-self: auto;
+    max-width: grid(12);
+  }
+}
+
+[class^="grid-"] {
+  @include grid-structure;
+}
+
+@mixin container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  max-width: $l-device;
+  @include d(m) {
+    max-width: $m-device;
+  }
+  @include d(s) {
+    max-width: $m-device;
+    flex-direction: column;
+  }
+}
+
+.container {
+  @include container;
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: - $gutter / 2;
+  margin-right: - $gutter / 2;
+  @include d(s) {
+    flex-direction: column;
+  }
+}
+
+.row {
+  @include row;
+}
+
+// div {
+//   min-height: 50px!important;
+//   margin-bottom: 10px;
+//   background: rgba($color: #000000, $alpha: .3);
+// }

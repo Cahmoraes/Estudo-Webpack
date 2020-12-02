@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmit": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,61 @@
+@import 'reset';
+
+
+.grid-structure {
+  display: grid;
+  grid-template-columns: 1fr minmax(760px, 980px) 1fr;
+}
+
+.header {
+  grid-column: 1 / -1;
+  padding: 20px calc((100% - 980px) / 2);
+  background: #333;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-brafe {
+    margin-left: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    margin-right: 10px;
+    a {
+      color: #FFF;
+    }
+    li + li {
+      margin-left: 10px;
+    }
+  }
+}
+
+.main {
+  grid-column: 1 / -1;
+  background: url("../assets/images/bg-intro.jpg") no-repeat center center;
+  padding: 150px 0;
+  background-size: cover;
+}
+
+.produtos {
+  padding: 60px 0;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 20px;
+}
+
+@media (max-width: 759px) {
+  .grid-structure {
+    grid-template-columns: 1fr;
+  }
+  .produtos {
+    grid-column: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

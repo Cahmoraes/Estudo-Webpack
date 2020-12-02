@@ -1,0 +1,20 @@
+@import 'grid';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$color: #333;
+$background: #EFEFEF;
+
+body {
+  background: $background;
+  color: $color;
+}
+
+img {
+  max-width: 100%;
+  color: $color;
+}

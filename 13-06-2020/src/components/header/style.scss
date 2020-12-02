@@ -1,0 +1,36 @@
+@import '../../style/variables-mixins';
+@import '../../style/grid';
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px calc((100% - 960px) / 2);
+  background: $fg;
+  color: $white;
+
+  ul {
+    display: flex;
+    a {
+      padding: 15px;
+    }
+  }
+
+  #container-search {
+    width: 100vw;
+    height: 100vh;
+    background: $white;
+    position: fixed;
+    color: $fg;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transform: translate3d(100vw, 0, 0);
+    transition: .3s ease-in;
+    will-change: transform;
+    &.active {
+      transform: translate3d(0, 0, 0);
+      transition: transform .5s cubic-bezier(0,0,.3,1);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.grid {
+  border: 1px solid;
+  margin: 0 auto;
+  max-width: 960px;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr minmax(200px, 450px) 1fr;
+}
+
+.item {
+  background: tomato;
+  
+  &.footer {
+    grid-area: auto / 1 / auto / -1
+  }
+}
+
+.sub-container {
+  background: tomato;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, 50%);
+  grid-auto-rows: 1fr;
+
+  .sub-item {
+    background: turquoise;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "sourceMap": true, /* Generates corresponding '.map' file. */
+    "removeComments": true, /* Do not emit comments to output. */
+    "noEmit": true, /* Do not emit outputs. */
+    // "importHelpers": true, /* Import emit helpers from 'tslib'. */
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "strict": true, /* Enable all strict type-checking options. */
+    "noImplicitAny": true,
+    "strictNullChecks": true, /* Enable strict null checks. */
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

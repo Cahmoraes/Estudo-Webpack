@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  height: 160px;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: end;
+}
+
+
+
+
+.item {
+  background: tomato;
+  margin: 5px;
+  text-align: center;
+  align-self: end;
+}
+
+
+
+
+.grid-container {
+  margin: 0 auto;
+  max-width: 600px;
+  border: 1px solid;
+}

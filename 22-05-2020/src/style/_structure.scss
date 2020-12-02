@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(760px, 960px) 1fr;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    ". produtos ."
+  ;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  background: url('../assets/images/bg-intro.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.produtos {
+  grid-area: produtos;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+
+  // margin: 0 auto;
+
+    // h2 {
+    //   text-align: center;
+    //   grid-column: 1 / -1;
+    // }
+}

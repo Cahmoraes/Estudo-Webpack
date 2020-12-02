@@ -1,0 +1,37 @@
+<table border="1">
+  <thead>
+    <tr>
+      ${
+      Object.keys(this.pessoas[0]).map(key => {
+      return `
+      <th>${ key[0].toUpperCase() + key.slice(1) }</th>
+      `
+      }).join('')
+      }
+    </tr>
+  <tbody>
+    ${
+    this.pessoas.map(pessoa => {
+    return `
+    <tr>
+      <td> ${pessoa.nome} </td>
+      <td> ${pessoa.idade} </td>
+      <td> ${pessoa.sexo} </td>
+      <td> ${pessoa.nacionalidade} </td>
+      <td>
+        ${
+        Object.entries(pessoa.caracteristicas).map(atributo => {
+        return `
+        ${ atributo.join(':') }
+        `
+        }).join('')
+        }
+      </td>
+      <td> ${pessoa.cor} </td>
+    </tr>
+    `
+    }).join('')
+    }
+  </tbody>
+  </thead>
+</table>

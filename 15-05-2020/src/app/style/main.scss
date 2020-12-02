@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid;
+  justify-content: space-between;
+  height: 300px;
+  align-content: flex-start;
+  
+
+  .item {
+    text-align: center;
+    background: tomato;
+    flex: 0 1 100px;
+    margin: 5px;
+  }
+
+  .stretch {
+    flex: 0 1 100%;
+    align-self: center;
+  }
+}

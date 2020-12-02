@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "sourceMap": true, /* Generates corresponding '.map' file. */
+    "removeComments": true, /* Do not emit comments to output. */
+    "noEmit": true, /* Do not emit outputs. */
+    "isolatedModules": true,
+    "strict": true, /* Enable all strict type-checking options. */
+    "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
+    "strictNullChecks": true, /* Enable strict null checks. */
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

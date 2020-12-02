@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: auto auto auto;
+  align-content: center;
+  grid-auto-rows: 30px;
+  justify-content: end;
+}
+
+
+.item {
+  text-align: center;
+  background: tomato;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.subitem {
+  background: rgba($color: #000000, $alpha: .3);
+}
+
+.grid {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #CCC;
+  height: 300px;
+}

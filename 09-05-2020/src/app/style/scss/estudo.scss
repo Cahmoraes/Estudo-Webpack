@@ -1,0 +1,28 @@
+.flexbox {
+  display: flex;
+  border: 1px solid;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 512px;
+
+  .item {
+    background: tomato;
+    border: 3px solid #000;
+    text-align: center;
+    color: #ffffff;
+    flex: 0 1 100px;
+  }
+
+  .item-1 {
+    flex: 0 1 calc(50% - 6px);
+  }
+
+  .item-2 {
+    flex: 0 1 calc(50% - 6px);
+  }
+
+  .stretch {
+    align-self: stretch;
+    flex: 0 1 100%;
+  }
+}

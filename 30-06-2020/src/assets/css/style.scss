@@ -1,0 +1,14 @@
+@import './grid';
+
+$background-color: #efefef;
+$color: #333;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: $background-color;
+  color: $color;
+}

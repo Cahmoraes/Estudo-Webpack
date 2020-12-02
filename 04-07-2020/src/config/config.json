@@ -1,0 +1,50 @@
+[
+  {
+    "nome": "caique moraes",
+    "idade": 26,
+    "sexo": "masculino",
+    "nacionalidade": "brasileiro",
+    "caracteristicas": {
+      "altura": 1.62,
+      "peso": 66.0,
+      "biotipo": "mesomorfo"
+    },
+    "cor": "branco"
+  },
+  {
+    "nome": "thomas moraes",
+    "idade": 20,
+    "sexo": "masculino",
+    "nacionalidade": "brasileiro",
+    "caracteristicas": {
+      "altura": 1.60,
+      "peso": 60.0,
+      "biotipo": "ectomorfo"
+    },
+    "cor": "branco"
+  },
+  {
+    "nome": "isabella moraes",
+    "nacionalidade": "brasileiro",
+    "idade": 22,
+    "sexo": "feminino",
+    "caracteristicas": {
+      "altura": 1.55,
+      "peso": 58.5,
+      "biotipo": "mesomorfo"
+    },
+    "cor": "branco"
+  },
+  {
+    "nome": "igor moraes",
+    "nacionalidade": "brasileiro",
+    "idade": 14,
+    "sexo": "masculino",
+    "caracteristicas": {
+      "altura": 1.61,
+      "peso": 59.0,
+      "biotipo": "ectomorfo"
+    },
+    "cor": "branco"
+  }
+]

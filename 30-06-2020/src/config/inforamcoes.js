@@ -1,0 +1,20 @@
+const Config = [
+  {
+    "nome": "Caique Moraes",
+    "idade": 26
+  },
+  {
+    "nome": "Isabella Moraes",
+    "idade": 22
+  },
+  {
+    "nome": "Thomas Moraes",
+    "idade": 20
+  },
+  {
+    "nome": "Igor Moraes",
+    "idade": 14
+  }
+]
+
+export default Config

@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  margin: 0 auto;
+  background: #333;
+  padding: 20px calc((100% - 980px) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    color: #FFF;
+    display: block;
+    font-size: 2rem;
+  }
+
+  nav {
+    @include d(s) {
+      display: none;
+    }
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+    li + li {
+      margin-left: 2rem;
+    }
+
+    a {
+      color: #FFF;
+    }
+
+  }
+
+  // Menu Toggle
+
+  input[id="inputMenu"] {
+    display: none;
+  }
+
+  input[id="inputMenu"] ~ nav {
+    @include d(s) {
+      display: block;
+      background: red;
+      background: red;
+      position: absolute;
+      transition: left .2s ease-in-out;
+      left: -62px;
+      ul {
+        display: block;
+        li + li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  input[id="inputMenu"]:checked ~ nav {
+    display: block;
+    left: 0;
+    
+ 
+
+  }
+
+  .menu-toggle {
+    @include d(s) {
+      width: 40px;
+      height: 23px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .one, .two, .three {
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        background: #FFF;
+      }
+    }
+  }
+
+}
